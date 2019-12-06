@@ -11,39 +11,24 @@
              BackgroundColor="Beige">
 
 
-        <StackLayout>
-        <Entry Text="label"/>
-        <AbsoluteLayout HeightRequest="125">
-            <Entry WidthRequest="125" Text="{Binding EntryText}"
-                   AbsoluteLayout.LayoutBounds=".5,.5" AbsoluteLayout.LayoutFlags="PositionProportional"/>
-        </AbsoluteLayout>
-        <ListView RowHeight="50">
-            <ListView.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>mono</x:String>
-                    <x:String>monodroid</x:String>
-                    <x:String>monotouch</x:String>
-                    <x:String>monorail</x:String>
-                    <x:String>monodevelop</x:String>
-                    <x:String>monotone</x:String>
-                    <x:String>monopoly</x:String>
-                    <x:String>monomodal</x:String>
-                    <x:String>mononucleosis</x:String>
-                </x:Array>
-            </ListView.ItemsSource>
-            
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell Height="50">
-                        <!--<AbsoluteLayout>-->
-                            <Entry Text="{Binding .}" WidthRequest="125"
-                                   AbsoluteLayout.LayoutBounds=".1,.5" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        <Grid>
+        <ScrollView Grid.Row="0">
+            <StackLayout>
+                <ContentView>
+                    <StackLayout>
+                        <StackLayout>
 
-                        <!--</AbsoluteLayout>-->
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </StackLayout>
+                            <Label Text="Test"/>
+                            <Switch/>
+
+                            <Entry Text="label" HeightRequest="50"/>
+
+                            <Entry Text="{Binding EntryText}" WidthRequest="75"/>
+                        </StackLayout>
+                    </StackLayout>
+                </ContentView>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
 
 </ContentPage>
